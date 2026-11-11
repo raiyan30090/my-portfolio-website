@@ -283,6 +283,63 @@ body {
     color: #fbff05;
 }
 
+/* --- Contact / Send a Message Section Responsive Styles --- */
+
+/* বড় স্ক্রিনের জন্য ডিফল্ট স্টাইল যা আপনার আছে তা বহাল থাকবে, নিচে মিডিয়া কুয়েরি দেওয়া হলো */
+
+@media screen and (max-width: 768px) {
+  /* ফর্মের মূল কন্টেইনার বা ব্যাকগ্রাউন্ড বক্স */
+  .contact-form {
+    width: 90% !important;
+    max-width: 100% !important;
+    margin: 20px auto !important;
+    padding: 20px 15px !important;
+    box-sizing: border-box;
+  }
+
+  /* হেডিং ছোট করা */
+  .contact-form h1 {
+    font-size: 24px !important;
+    text-align: center;
+  }
+
+  /* লেবেলগুলোর সাইজ */
+  .contact-form .out {
+    font-size: 14px !important;
+  }
+
+  /* ইনপুট ফিল্ড এবং টেক্সটএরিয়া মোবাইল ফ্রেন্ডলি করা */
+  .contact-form .box,
+  .contact-form .box-msg {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 14px !important;
+    padding: 10px !important;
+    box-sizing: border-box;
+  }
+
+  /* সাবমিট বাটন পুরো উইথ বা সুন্দর আকারে রাখা */
+  .contact-form .btn-send-msg {
+    width: 100% !important;
+    display: block !important;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 12px 20px !important;
+    font-size: 15px !important;
+  }
+}
+
+/* ছোট মোবাইল স্ক্রিনের জন্য (যেমন 480px এর নিচে) */
+@media screen and (max-width: 480px) {
+  .contact-form {
+    padding: 15px 10px !important;
+  }
+  
+  .contact-form h1 {
+    font-size: 20px !important;
+  }
+}
+
 .btn-send-msg {
     display: inline-block;
     border: 1px solid #334155;
