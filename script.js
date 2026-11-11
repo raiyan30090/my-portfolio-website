@@ -20,3 +20,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sendBtn = document.getElementById('sendBtn');
+  
+  if (sendBtn) {
+    sendBtn.addEventListener('click', function () {
+      // ইনপুট ফিল্ড থেকে ডাটা সংগ্রহ
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // ভ্যালিডেশন
+      if (!name || !phone || !message) {
+        alert('দয়া করে আপনার নাম, ফোন নম্বর এবং মেসেজটি পূরণ করুন!');
+        return;
+      }
+
+      // আপনার WhatsApp নম্বর
+      const myPhoneNumber = '8801814628003';
+
+      // হোয়াটসঅ্যাপ টেক্সট ফরম্যাট
+      const text = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+      const whatsappURL = `https://wa.me/${myPhoneNumber}?text=${text}`;
+
+      // সফল মেসেজ ও রিডাইরেক্ট
+      alert('Thank you! Redirecting to WhatsApp...');
+      window.location.href = whatsappURL;
+    });
+  }
+});

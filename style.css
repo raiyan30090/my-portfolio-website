@@ -30,10 +30,10 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(7, 15, 30, 0.95);
+    background-color: rgba(2, 3, 3, 0.329);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(187, 1, 140, 0.836);
 }
 
 .nav-container {
@@ -52,8 +52,13 @@ body {
     text-decoration: none;
     color: #fff;
 }
-
-.logo-box {
+.logo-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+/* .logo-box {
     background: linear-gradient(135deg, #0284c7, #38bdf8);
     width: 40px;
     height: 40px;
@@ -63,11 +68,14 @@ body {
     justify-content: center;
     font-weight: 700;
     font-size: 1.1rem;
-}
+} */
 
 .logo-text {
     display: flex;
     flex-direction: column;
+    color: #ffd905;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .logo-text .name {
@@ -77,7 +85,7 @@ body {
 
 .logo-text .role {
     font-size: 0.75rem;
-    color: var(--primary-light-blue);
+    color: #faf9f9;
 }
 
 .nav-links {
@@ -185,7 +193,7 @@ body {
 }
 
 .btn-primary {
-    background: #0284c7;
+    background: #b61e03;
     color: #fff;
 }
 
@@ -197,12 +205,101 @@ body {
 .social-icons {
     display: flex;
     gap: 12px;
+
 }
 
+.pill-text {
+    /* font-size: 0.7rem; */
+    text-align: left;
+    color: #fdfdff;
+}
+
+.contact-pill {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #109c03;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fdfdfd;
+    width: 50%;
+    justify-content: center;
+}
+
+.contact-call {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #e6e208;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #050303;
+    width: 50%;
+    justify-content: center;
+    font-size: 0.88rem;
+    font-weight: 650;
+}
+
+.contact-form {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* gap: 15px; */
+    background: #32b809;
+    padding: 20px;
+    border-radius: 19px;
+
+}
+.out {
+    font-size: 1rem;
+    color: #1c0357;
+    font-weight: 600;
+    
+    
+}
+
+.box{
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #db091a;
+    font-size: 0.88rem;
+    text-align: center;
+    background: #050101;
+    color: #fbff05;
+}
+
+.box-msg{
+    width: 300px;
+    height: 80px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #db091a;
+    font-size: 0.88rem;
+    text-align: center;
+    background: #050101;
+    color: #fbff05;
+}
+
+.btn-send-msg {
+    display: inline-block;
+    border: 1px solid #334155;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    width: 400px;
+    margin-bottom: 20px;
+    background: #b61e03;
+}
 .social-icons a {
     width: 36px;
     height: 36px;
-    background: #1e293b;
+    background: #074d01;
+
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -214,7 +311,7 @@ body {
 }
 
 .social-icons a:hover {
-    background: var(--primary-blue);
+    background: rgb(180, 4, 4);
 }
 
 /* Hero Center Image */
@@ -800,4 +897,56 @@ body {
         align-items: flex-start;
         gap: 10px;
     }
+}
+
+.notice-container {
+  display: flex;
+  /* align-items: center; */
+  background-color: #e7f709;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  width:1750px;
+  max-width: 1650px;
+  margin: 10px auto;
+  box-shadow: 0 2px 5px rgba(224, 6, 6, 0.05);
+}
+
+.notice-title {
+  background-color: #380202;
+  padding: 10px 15px;
+  font-weight: bold;
+  color: #01ff0d;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  font-size: 15px;
+  border-right: 1px solid #15ff00;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.marquee-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 30s linear infinite;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #000000;
+  font-weight: 500;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }
