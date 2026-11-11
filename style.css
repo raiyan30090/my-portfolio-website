@@ -1019,37 +1019,44 @@ body {
   transition: all 0.3s ease;
 }
 
-/* --- Mobile Responsive Fix --- */
+/* --- Final Perfect Mobile Header & Notice Fix --- */
 @media screen and (max-width: 768px) {
-  /* হেডার পজিশন ও লেআউট */
+  /* মেইন হেডার ডিজাইন */
   header.header {
     width: 100% !important;
     position: relative !important;
     z-index: 1000 !important;
-    padding: 10px 15px !important;
+    padding: 12px 15px !important;
     box-sizing: border-box !important;
   }
 
   .nav-container {
     display: flex !important;
-    flex-wrap: wrap !important;
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important;
+    position: relative !important;
   }
 
-  /* লোগো ও ছবি বামে এবং সাইজ মোবাইল ফ্রেন্ডলি করা */
+  /* লোগো, ছবি ও টেক্সট পাশাপাশি সুন্দরভাবে সাজানো */
   .nav-container > a.logo {
     display: flex !important;
     align-items: center !important;
     gap: 10px !important;
     text-decoration: none !important;
+    flex: 1 !important;
+    overflow: hidden !important;
+  }
+
+  .logo-box {
+    flex-shrink: 0 !important;
   }
 
   .logo-pic {
-    width: 45px !important;
-    height: 45px !important;
-    border-radius: 8px !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 6px !important;
+    object-fit: cover !important;
   }
 
   .logo-text {
@@ -1059,37 +1066,49 @@ body {
   }
 
   .logo-text .name {
-    font-size: 16px !important;
+    font-size: 15px !important;
     font-weight: bold !important;
     color: #ffcc00 !important;
     line-height: 1.2 !important;
+    white-space: nowrap !important;
   }
 
   .logo-text .role {
-    font-size: 12px !important;
+    font-size: 11px !important;
     color: #ffffff !important;
+    white-space: nowrap !important;
   }
 
-  /* ৩-লাইন আইকন মোবাইলে দেখানো */
+  /* মোবাইল হ্যামবার্গার মেনু বাটন সঠিক পজিশনে রাখা */
   .menu-toggle {
     display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 26px !important;
+    height: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+    margin-left: 10px !important;
   }
 
-  /* মেনু অপশনগুলো ডিফল্টভাবে লুকিয়ে রাখা */
+  /* ডিফল্টভাবে মেনু লিংকগুলো লুকিয়ে রাখা (ক্লিক করলে আসবে) */
   ul.nav-links {
     display: none !important;
-    flex-direction: column !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
     width: 100% !important;
+    flex-direction: column !important;
     background-color: #0b132b !important;
     text-align: center !important;
     padding: 15px 0 !important;
-    margin-top: 15px !important;
-    border-radius: 8px !important;
+    margin: 0 !important;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4) !important;
     list-style: none !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+    z-index: 2000 !important;
   }
 
-  /* ৩-লাইনে ক্লিক করলে মেনু খুলবে */
+  /* একটিভ হলে মেনু শো করবে */
   ul.nav-links.active {
     display: flex !important;
   }
@@ -1099,17 +1118,17 @@ body {
   }
 
   ul.nav-links li a {
-    font-size: 15px !important;
+    font-size: 16px !important;
     color: #ffffff !important;
     text-decoration: none !important;
   }
 
-  /* নোটিশ কন্টেইনার ফিক্স (যেন দৃশ্যমান থাকে) */
+  /* নোটিশ কন্টেইনার ফিক্স যাতে ক্লিয়ার ও দৃশ্যমান থাকে */
   .notice-container, 
   .notice-box, 
   div[class*="notice"] {
     position: relative !important;
-    z-index: 99 !important;
+    z-index: 10 !important;
     width: 95% !important;
     margin: 15px auto !important;
     display: block !important;
