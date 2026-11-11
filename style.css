@@ -1001,80 +1001,81 @@ body {
   }
 }
 
-/* --- Header, Navbar & Notice Container Mobile Responsive Fix --- */
-
+/* --- Exact Mobile Responsive Fix for Header & Navbar --- */
 @media screen and (max-width: 768px) {
-  /* ১. হেডার ও ন্যাভবার রেসপন্সিভ */
-  header, 
-  .header, 
-  .navbar {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 10px 15px !important;
-    box-sizing: border-box !important;
+  /* মেইন হেডার এবং কন্টেইনারকে ফ্লেক্স কলাম করে সেন্টারে আনা */
+  header.header, 
+  .nav-container {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-  }
-
-  /* লোগো ও ব্র্যান্ড অংশ */
-  .logo, 
-  .nav-logo, 
-  .brand {
     text-align: center !important;
-    margin-bottom: 8px !important;
+    width: 100% !important;
+    padding: 15px 10px !important;
+    box-sizing: border-box !important;
   }
 
-  /* ন্যাভবার লিস্ট বা মেনু লিংকগুলো */
-  nav ul, 
-  .nav-links, 
-  .menu {
+  /* লোগো লিংক বা ট্যাগটি ব্লক করে সেন্টারে আনা */
+  .nav-container > a.logo {
     display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    text-decoration: none !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* লোগো বক্স ও ছবি */
+  .logo-box {
+    margin-bottom: 8px !important;
+    text-align: center !important;
+  }
+
+  .logo-pic {
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  /* লোগো টেক্সট (নাম ও প্রফেশন) */
+  .logo-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .logo-text .name {
+    font-size: 20px !important;
+    display: block !important;
+    margin-bottom: 4px !important;
+  }
+
+  .logo-text .role {
+    font-size: 14px !important;
+    display: block !important;
+  }
+
+  /* ন্যাভ লিংক বা মেনুগুলো নিচে নিচে বা সুন্দরভাবে সাজানো */
+  ul.nav-links {
+    display: flex !important;
+    flex-direction: row !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
-    gap: 8px 12px !important;
+    gap: 8px 15px !important;
     padding: 0 !important;
-    margin: 0 !important;
+    margin: 10px 0 0 0 !important;
     list-style: none !important;
+    width: 100% !important;
   }
 
-  nav ul li a, 
-  .nav-links a {
+  ul.nav-links li {
+    display: inline-block !important;
+  }
+
+  ul.nav-links li a {
     font-size: 14px !important;
-  }
-
-  /* ২. নোটিশ কন্টেইনার বা ব্যানার রেসপন্সিভ */
-  .notice-container, 
-  .notice-box, 
-  .announcement, 
-  .notice {
-    width: 92% !important;
-    max-width: 100% !important;
-    margin: 10px auto !important;
-    padding: 12px 15px !important;
-    box-sizing: border-box !important;
-    font-size: 14px !important;
-    text-align: center !important;
-    word-break: break-word !important;
-  }
-}
-
-/* ছোট মোবাইল স্ক্রিনের জন্য (যেমন ৪৮০ পিক্সেলের নিচে) */
-@media screen and (max-width: 480px) {
-  nav ul, 
-  .nav-links {
-    gap: 6px 10px !important;
-  }
-  
-  nav ul li a, 
-  .nav-links a {
-    font-size: 13px !important;
-  }
-
-  .notice-container, 
-  .notice-box {
-    font-size: 13px !important;
-    padding: 10px !important;
   }
 }
