@@ -1140,6 +1140,6 @@ body {
   .notice-container *, 
   .notice-box *, 
   div[class*="notice"] * {
-    color: #ffffff !important;
+    color: #0a0303 !important;
   }
 }
