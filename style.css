@@ -1001,46 +1001,54 @@ body {
   }
 }
 
-/* --- Nav Header & Notice Container Responsive Fix --- */
+/* --- Header, Navbar & Notice Container Mobile Responsive Fix --- */
 
 @media screen and (max-width: 768px) {
-  /* ১. ন্যাভ হেডার রেসপন্সিভ ফিক্স */
+  /* ১. হেডার ও ন্যাভবার রেসপন্সিভ */
   header, 
-  .navbar, 
-  .nav-container {
+  .header, 
+  .navbar {
     width: 100% !important;
+    max-width: 100% !important;
     padding: 10px 15px !important;
     box-sizing: border-box !important;
     display: flex !important;
-    flex-direction: column !important; /* মোবাইলে লোগো ও মেনু এক লাইনে না রেখে নিচে নিচে নিয়ে আসার জন্য */
+    flex-direction: column !important;
     align-items: center !important;
+    justify-content: center !important;
   }
 
-  /* লোগো ও ব্র্যান্ডিং এরিয়া */
-  .logo, .nav-logo {
-    margin-bottom: 10px !important;
+  /* লোগো ও ব্র্যান্ড অংশ */
+  .logo, 
+  .nav-logo, 
+  .brand {
     text-align: center !important;
+    margin-bottom: 8px !important;
   }
 
-  /* ন্যাভ মেনু বা লিংকের লিস্ট */
-  nav ul, .nav-links {
+  /* ন্যাভবার লিস্ট বা মেনু লিংকগুলো */
+  nav ul, 
+  .nav-links, 
+  .menu {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
-    gap: 10px 15px !important;
+    gap: 8px 12px !important;
     padding: 0 !important;
     margin: 0 !important;
     list-style: none !important;
   }
 
-  nav ul li a, .nav-links a {
+  nav ul li a, 
+  .nav-links a {
     font-size: 14px !important;
   }
 
-  /* ২. নোটিশ কন্টেইনার / ব্যানার রেসপন্সিভ ফিক্স */
+  /* ২. নোটিশ কন্টেইনার বা ব্যানার রেসপন্সিভ */
   .notice-container, 
   .notice-box, 
-  .announcement {
+  .announcement, 
+  .notice {
     width: 92% !important;
     max-width: 100% !important;
     margin: 10px auto !important;
@@ -1048,17 +1056,25 @@ body {
     box-sizing: border-box !important;
     font-size: 14px !important;
     text-align: center !important;
-    word-break: break-word !important; /* বড় লেখা থাকলে ভেঙে নিচে নেমে যাবে, বাইরে চলে যাবে না */
+    word-break: break-word !important;
   }
 }
 
-/* ছোট মোবাইলের জন্য (যেমন ৪৪০ পিক্সেলের নিচে) */
+/* ছোট মোবাইল স্ক্রিনের জন্য (যেমন ৪৮০ পিক্সেলের নিচে) */
 @media screen and (max-width: 480px) {
-  nav ul, .nav-links {
-    gap: 8px 10px !important;
+  nav ul, 
+  .nav-links {
+    gap: 6px 10px !important;
   }
   
-  nav ul li a, .nav-links a {
+  nav ul li a, 
+  .nav-links a {
     font-size: 13px !important;
+  }
+
+  .notice-container, 
+  .notice-box {
+    font-size: 13px !important;
+    padding: 10px !important;
   }
 }
