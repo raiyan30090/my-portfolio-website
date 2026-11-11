@@ -1021,7 +1021,6 @@ body {
 
 /* --- Final Perfect Mobile Header & Notice Fix --- */
 @media screen and (max-width: 768px) {
-  /* মেইন হেডার ডিজাইন */
   header.header {
     width: 100% !important;
     position: relative !important;
@@ -1038,7 +1037,6 @@ body {
     position: relative !important;
   }
 
-  /* লোগো, ছবি ও টেক্সট পাশাপাশি সুন্দরভাবে সাজানো */
   .nav-container > a.logo {
     display: flex !important;
     align-items: center !important;
@@ -1079,19 +1077,20 @@ body {
     white-space: nowrap !important;
   }
 
-  /* মোবাইল হ্যামবার্গার মেনু বাটন সঠিক পজিশনে রাখা */
+  /* হ্যামবার্গার মেনু আইকন মোবাইলে দৃশ্যমান করা */
   .menu-toggle {
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
-    width: 26px !important;
-    height: 18px !important;
+    width: 28px !important;
+    height: 20px !important;
     cursor: pointer !important;
     flex-shrink: 0 !important;
     margin-left: 10px !important;
+    z-index: 1002 !important;
   }
 
-  /* ডিফল্টভাবে মেনু লিংকগুলো লুকিয়ে রাখা (ক্লিক করলে আসবে) */
+  /* ডিফল্টভাবে মেনু লিংক লুকিয়ে রাখা */
   ul.nav-links {
     display: none !important;
     position: absolute !important;
@@ -1103,12 +1102,12 @@ body {
     text-align: center !important;
     padding: 15px 0 !important;
     margin: 0 !important;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4) !important;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5) !important;
     list-style: none !important;
     z-index: 2000 !important;
   }
 
-  /* একটিভ হলে মেনু শো করবে */
+  /* ক্লিক করলে মেনু শো করবে */
   ul.nav-links.active {
     display: flex !important;
   }
@@ -1123,16 +1122,24 @@ body {
     text-decoration: none !important;
   }
 
-  /* নোটিশ কন্টেইনার ফিক্স যাতে ক্লিয়ার ও দৃশ্যমান থাকে */
+  /* নোটিশ কন্টেইনার ফিক্স */
   .notice-container, 
   .notice-box, 
   div[class*="notice"] {
     position: relative !important;
     z-index: 10 !important;
-    width: 95% !important;
+    width: 92% !important;
     margin: 15px auto !important;
+    padding: 12px 15px !important;
+    box-sizing: border-box !important;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+  }
+
+  .notice-container *, 
+  .notice-box *, 
+  div[class*="notice"] * {
+    color: #ffffff !important;
   }
 }
