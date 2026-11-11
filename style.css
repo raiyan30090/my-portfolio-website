@@ -1001,81 +1001,119 @@ body {
   }
 }
 
-/* --- Exact Mobile Responsive Fix for Header & Navbar --- */
+/* --- Hamburger Menu Icon Styling --- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* --- Mobile Responsive Fix --- */
 @media screen and (max-width: 768px) {
-  /* মেইন হেডার এবং কন্টেইনারকে ফ্লেক্স কলাম করে সেন্টারে আনা */
-  header.header, 
-  .nav-container {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
+  /* হেডার পজিশন ও লেআউট */
+  header.header {
     width: 100% !important;
-    padding: 15px 10px !important;
+    position: relative !important;
+    z-index: 1000 !important;
+    padding: 10px 15px !important;
     box-sizing: border-box !important;
   }
 
-  /* লোগো লিংক বা ট্যাগটি ব্লক করে সেন্টারে আনা */
-  .nav-container > a.logo {
+  .nav-container {
     display: flex !important;
-    flex-direction: column !important;
+    flex-wrap: wrap !important;
     align-items: center !important;
-    text-align: center !important;
+    justify-content: space-between !important;
     width: 100% !important;
-    text-decoration: none !important;
-    margin-bottom: 12px !important;
   }
 
-  /* লোগো বক্স ও ছবি */
-  .logo-box {
-    margin-bottom: 8px !important;
-    text-align: center !important;
+  /* লোগো ও ছবি বামে এবং সাইজ মোবাইল ফ্রেন্ডলি করা */
+  .nav-container > a.logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    text-decoration: none !important;
   }
 
   .logo-pic {
-    display: block !important;
-    margin: 0 auto !important;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 8px !important;
   }
 
-  /* লোগো টেক্সট (নাম ও প্রফেশন) */
   .logo-text {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    width: 100% !important;
+    text-align: left !important;
   }
 
   .logo-text .name {
-    font-size: 20px !important;
-    display: block !important;
-    margin-bottom: 4px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #ffcc00 !important;
+    line-height: 1.2 !important;
   }
 
   .logo-text .role {
-    font-size: 14px !important;
-    display: block !important;
+    font-size: 12px !important;
+    color: #ffffff !important;
   }
 
-  /* ন্যাভ লিংক বা মেনুগুলো নিচে নিচে বা সুন্দরভাবে সাজানো */
-  ul.nav-links {
+  /* ৩-লাইন আইকন মোবাইলে দেখানো */
+  .menu-toggle {
     display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 8px 15px !important;
-    padding: 0 !important;
-    margin: 10px 0 0 0 !important;
-    list-style: none !important;
+  }
+
+  /* মেনু অপশনগুলো ডিফল্টভাবে লুকিয়ে রাখা */
+  ul.nav-links {
+    display: none !important;
+    flex-direction: column !important;
     width: 100% !important;
+    background-color: #0b132b !important;
+    text-align: center !important;
+    padding: 15px 0 !important;
+    margin-top: 15px !important;
+    border-radius: 8px !important;
+    list-style: none !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+  }
+
+  /* ৩-লাইনে ক্লিক করলে মেনু খুলবে */
+  ul.nav-links.active {
+    display: flex !important;
   }
 
   ul.nav-links li {
-    display: inline-block !important;
+    margin: 10px 0 !important;
   }
 
   ul.nav-links li a {
-    font-size: 14px !important;
+    font-size: 15px !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+  }
+
+  /* নোটিশ কন্টেইনার ফিক্স (যেন দৃশ্যমান থাকে) */
+  .notice-container, 
+  .notice-box, 
+  div[class*="notice"] {
+    position: relative !important;
+    z-index: 99 !important;
+    width: 95% !important;
+    margin: 15px auto !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 }
