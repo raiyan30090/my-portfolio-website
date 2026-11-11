@@ -1019,120 +1019,28 @@ body {
   transition: all 0.3s ease;
 }
 
-/* --- Final Perfect Mobile Header & Notice Fix --- */
+/* --- Fix Notice Container & Remove Extra Bar --- */
 @media screen and (max-width: 768px) {
-  /* মেইন হেডার ডিজাইন */
-  header.header {
-    width: 100% !important;
-    position: relative !important;
-    z-index: 1000 !important;
-    padding: 12px 15px !important;
-    box-sizing: border-box !important;
-  }
-
-  .nav-container {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-    position: relative !important;
-  }
-
-  /* লোগো, ছবি ও টেক্সট পাশাপাশি সুন্দরভাবে সাজানো */
-  .nav-container > a.logo {
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    text-decoration: none !important;
-    flex: 1 !important;
-    overflow: hidden !important;
-  }
-
-  .logo-box {
-    flex-shrink: 0 !important;
-  }
-
-  .logo-pic {
-    width: 42px !important;
-    height: 42px !important;
-    border-radius: 6px !important;
-    object-fit: cover !important;
-  }
-
-  .logo-text {
-    display: flex !important;
-    flex-direction: column !important;
-    text-align: left !important;
-  }
-
-  .logo-text .name {
-    font-size: 15px !important;
-    font-weight: bold !important;
-    color: #ffcc00 !important;
-    line-height: 1.2 !important;
-    white-space: nowrap !important;
-  }
-
-  .logo-text .role {
-    font-size: 11px !important;
-    color: #ffffff !important;
-    white-space: nowrap !important;
-  }
-
-  /* মোবাইল হ্যামবার্গার মেনু বাটন সঠিক পজিশনে রাখা */
-  .menu-toggle {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    width: 26px !important;
-    height: 18px !important;
-    cursor: pointer !important;
-    flex-shrink: 0 !important;
-    margin-left: 10px !important;
-  }
-
-  /* ডিফল্টভাবে মেনু লিংকগুলো লুকিয়ে রাখা (ক্লিক করলে আসবে) */
-  ul.nav-links {
+  /* ওপরের অতিরিক্ত যেকোনো বার বা ফ্লোটিং আইকন লুকিয়ে রাখা */
+  header.header ~ div:not([class*="notice"]):not(.hero):not(.about),
+  .nav-container ~ div:not([class*="notice"]) {
     display: none !important;
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    width: 100% !important;
-    flex-direction: column !important;
-    background-color: #0b132b !important;
-    text-align: center !important;
-    padding: 15px 0 !important;
-    margin: 0 !important;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4) !important;
-    list-style: none !important;
-    z-index: 2000 !important;
   }
 
-  /* একটিভ হলে মেনু শো করবে */
-  ul.nav-links.active {
-    display: flex !important;
-  }
-
-  ul.nav-links li {
-    margin: 10px 0 !important;
-  }
-
-  ul.nav-links li a {
-    font-size: 16px !important;
-    color: #ffffff !important;
-    text-decoration: none !important;
-  }
-
-  /* নোটিশ কন্টেইনার ফিক্স যাতে ক্লিয়ার ও দৃশ্যমান থাকে */
+  /* নোটিশ কন্টেইনারের সাইজ ও মার্জিন ঠিক করা যেন বেশি লম্বা বা চওড়া না লাগে */
   .notice-container, 
   .notice-box, 
   div[class*="notice"] {
     position: relative !important;
     z-index: 10 !important;
-    width: 95% !important;
-    margin: 15px auto !important;
+    width: 92% !important;
+    max-width: 100% !important;
+    margin: 10px auto !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    background-color: transparent !important; /* যদি অতিরিক্ত হলুদ ব্যাকগ্রাউন্ড থাকে তা রিমুভ করার জন্য */
   }
 }
