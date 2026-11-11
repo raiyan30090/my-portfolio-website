@@ -906,8 +906,8 @@ body {
   border: 1px solid #ddd;
   border-radius: 6px;
   overflow: hidden;
-  width:1750px;
-  max-width: 1650px;
+  width:1050px;
+  max-width: 1150px;
   margin: 10px auto;
   box-shadow: 0 2px 5px rgba(224, 6, 6, 0.05);
 }
@@ -971,7 +971,7 @@ body {
 }
 
 /* মোবাইল ও ট্যাবলেটের জন্য মিডিয়া কুয়েরি */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 450px) {
   body {
     overflow-x: hidden !important; /* ডানে-বামে স্ক্রিন যেন অতিরিক্ত স্ক্রোল না হয় */
   }
@@ -998,5 +998,67 @@ body {
     text-align: center !important;
     box-sizing: border-box !important;
     padding: 12px !important;
+  }
+}
+
+/* --- Nav Header & Notice Container Responsive Fix --- */
+
+@media screen and (max-width: 768px) {
+  /* ১. ন্যাভ হেডার রেসপন্সিভ ফিক্স */
+  header, 
+  .navbar, 
+  .nav-container {
+    width: 100% !important;
+    padding: 10px 15px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important; /* মোবাইলে লোগো ও মেনু এক লাইনে না রেখে নিচে নিচে নিয়ে আসার জন্য */
+    align-items: center !important;
+  }
+
+  /* লোগো ও ব্র্যান্ডিং এরিয়া */
+  .logo, .nav-logo {
+    margin-bottom: 10px !important;
+    text-align: center !important;
+  }
+
+  /* ন্যাভ মেনু বা লিংকের লিস্ট */
+  nav ul, .nav-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px 15px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+
+  nav ul li a, .nav-links a {
+    font-size: 14px !important;
+  }
+
+  /* ২. নোটিশ কন্টেইনার / ব্যানার রেসপন্সিভ ফিক্স */
+  .notice-container, 
+  .notice-box, 
+  .announcement {
+    width: 92% !important;
+    max-width: 100% !important;
+    margin: 10px auto !important;
+    padding: 12px 15px !important;
+    box-sizing: border-box !important;
+    font-size: 14px !important;
+    text-align: center !important;
+    word-break: break-word !important; /* বড় লেখা থাকলে ভেঙে নিচে নেমে যাবে, বাইরে চলে যাবে না */
+  }
+}
+
+/* ছোট মোবাইলের জন্য (যেমন ৪৪০ পিক্সেলের নিচে) */
+@media screen and (max-width: 480px) {
+  nav ul, .nav-links {
+    gap: 8px 10px !important;
+  }
+  
+  nav ul li a, .nav-links a {
+    font-size: 13px !important;
   }
 }
