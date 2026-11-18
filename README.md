@@ -7,7 +7,7 @@ A modern, responsive personal portfolio website designed to showcase my skills, 
 
 ## 🖼️ Project Screenshot
 <p align="center">
-  <img src="https://via.placeholder.com/800x450.png?text=Portfolio+Website+Screenshot" alt="Portfolio Screenshot" width="100%">
+  <img src="Screenshot 2026-11-18 204052.png" width="100%">
 </p>
 
 ---
